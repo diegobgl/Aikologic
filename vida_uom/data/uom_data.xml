@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="uom_category_time" model="uom.category">
+        <field name="name">Time</field>
+    </record>
+
+    <record id="time_minutes" model="uom.uom">
+        <field name="name">Minutes</field>
+        <field name="category_id" ref="uom_category_time"/>
+        <field name="factor_inv" eval="1.0"/>
+        <field name="uom_type">reference</field>
+    </record>
+
+    <record id="time_hours" model="uom.uom">
+        <field name="name">Hours</field>
+        <field name="category_id" ref="uom_category_time"/>
+        <field name="factor_inv" eval="60.0"/>
+        <field name="uom_type">bigger</field>
+    </record>
+
+    <record id="time_days" model="uom.uom">
+        <field name="name">Days</field>
+        <field name="category_id" ref="uom_category_time"/>
+        <field name="factor_inv" eval="1440.0"/>
+        <field name="uom_type">bigger</field>
+    </record>
+
+</odoo>
